@@ -1,0 +1,310 @@
+/*
+  DOCTOR CARES HOSPITAL — HEADER REFINEMENT
+  Add this file after style.css in the <head> of index.html.
+  It intentionally changes only the shared header and top information strips.
+*/
+
+/* Remove the redundant information strip, but keep the demo disclosure visible. */
+.info-bar {
+  display: none !important;
+}
+
+.demo-notice {
+  display: block;
+  width: min(100% - 4rem, 144rem);
+  margin: 1rem auto 0;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid #e8dfc9;
+  border-radius: 0.8rem;
+  background: #fbf8f0;
+  color: #65563b;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+/* Give the main header a calmer, more deliberate institutional appearance. */
+.site-header {
+  position: relative;
+  z-index: 100;
+  width: min(100% - 4rem, 144rem);
+  max-width: 144rem;
+  height: auto;
+  min-height: 8.4rem;
+  margin: 1.6rem auto 0;
+  padding: 1.2rem 2.4rem;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid #e5edf1;
+  border-radius: 1.6rem;
+  box-shadow: 0 1.2rem 3.2rem rgba(11, 25, 44, 0.07);
+  backdrop-filter: blur(14px);
+}
+
+.header-container {
+  width: 100%;
+  max-width: none;
+  min-height: 5.8rem;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(1.2rem, 2vw, 3rem);
+}
+
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: max-content;
+  text-decoration: none;
+  line-height: 1.1;
+}
+
+.logo-text {
+  color: #10263d;
+  font-size: clamp(2rem, 1.8vw, 2.65rem);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+}
+
+.logo-mark {
+  color: #0f766e;
+}
+
+.brand-dot {
+  color: #c39a55;
+}
+
+.logo-subtext {
+  margin-top: 0.55rem;
+  color: #647789;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.105em;
+  text-transform: uppercase;
+}
+
+.navbar {
+  position: static;
+  min-width: 0;
+  height: auto;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  overflow: visible;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 4rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.8rem;
+  color: #405469;
+  font-size: 1.22rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: #0f766e;
+  background: #edf7f5;
+}
+
+.nav-link.active-link {
+  color: #0f766e;
+  background: #edf7f5;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.nav-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.8rem;
+  padding: 0 1.8rem;
+  border: 1px solid #0f766e;
+  border-radius: 0.9rem;
+  background: #0f766e;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 750;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 0.6rem 1.4rem rgba(15, 118, 110, 0.16);
+  transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.nav-cta-btn:hover,
+.nav-cta-btn:focus-visible {
+  background: #115e59;
+  border-color: #115e59;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 0.9rem 1.8rem rgba(15, 118, 110, 0.2);
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.45rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 0;
+  border: 1px solid #dce7eb;
+  border-radius: 0.9rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 2rem;
+  height: 2px;
+  border-radius: 2px;
+  background: #10263d;
+}
+
+/* Medium screens: preserve the full navigation without squeezing the brand. */
+@media (max-width: 1120px) and (min-width: 769px) {
+  .site-header {
+    width: calc(100% - 2.4rem);
+    padding: 1rem 1.4rem;
+  }
+
+  .header-container {
+    grid-template-columns: auto minmax(0, 1fr);
+    row-gap: 0.8rem;
+  }
+
+  .navbar {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .nav-list {
+    justify-content: flex-start;
+  }
+
+  .header-actions {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+/* Mobile: retain the existing JavaScript-controlled slide-out menu. */
+@media (max-width: 768px) {
+  .site-header {
+    width: calc(100% - 2rem);
+    min-height: 7.2rem;
+    margin: 1rem auto 0;
+    padding: 0.9rem 1.2rem;
+    border-radius: 1.2rem;
+  }
+
+  .header-container {
+    min-height: 5.2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .logo-text {
+    font-size: 2.25rem;
+  }
+
+  .logo-subtext {
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex: 0 0 auto;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 8.5rem;
+    right: -100%;
+    width: min(86%, 36rem);
+    max-width: 36rem;
+    height: calc(100dvh - 9.5rem);
+    padding: 2rem 1.8rem;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #e5edf1;
+    border-radius: 1.2rem 0 0 1.2rem;
+    box-shadow: 0 1.5rem 4rem rgba(11, 25, 44, 0.18);
+    transition: right 220ms ease;
+    z-index: 99;
+  }
+
+  .navbar.is-open {
+    right: 0;
+  }
+
+  .nav-list {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-list .nav-link {
+    display: flex;
+    width: 100%;
+    min-height: 4.8rem;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.5rem;
+    white-space: normal;
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+
+  .nav-cta-btn {
+    display: none;
+  }
+
+  .nav-backdrop.is-open {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 25, 44, 0.42);
+    backdrop-filter: blur(2px);
+    z-index: 98;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link,
+  .nav-cta-btn,
+  .navbar {
+    transition: none;
+  }
+}
