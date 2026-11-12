@@ -11,14 +11,30 @@
     else fn();
   }
 
-  function initPreloader() {
-    var preloader = document.getElementById('preloader');
-    if (!preloader) return;
+  
+function initPreloader() {
+  var preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  var dismissed = false;
+
+  function dismiss() {
+    if (dismissed || !preloader.isConnected) return;
+
+    dismissed = true;
     preloader.classList.add('fade-out');
+
     window.setTimeout(function () {
-      if (preloader.parentNode) preloader.parentNode.removeChild(preloader);
-    }, reduceMotion ? 0 : 350);
+      if (preloader.parentNode) {
+        preloader.parentNode.removeChild(preloader);
+      }
+    }, reduceMotion ? 0 : 600);
   }
+
+  // Display the animation for three seconds, then fade it away.
+  window.setTimeout(dismiss, 3000);
+}
+
 
   function initHeader() {
     var header = document.getElementById('site-header');
