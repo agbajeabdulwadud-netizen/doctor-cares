@@ -226,7 +226,7 @@
 @media (max-width: 768px) {
   .site-header {
     position: sticky;
-    top: 0;
+    top: .8rem;
     width: calc(100% - 2rem);
     margin: .8rem auto 0;
     padding: .8rem 1.1rem;
