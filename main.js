@@ -326,15 +326,13 @@ function initPreloader() {
   }
 
   ready(function () {
-    initPreloader();
-    initHeader();
-    initMobileNavigation();
-    initAccordions();
-    initBookingDialog();
-    initDemoForms();
-    initDoctorSearch();
-    initPrintChecklist();
-    initDepartmentTemplate();
-    initContactDateBounds();
-  });
-})();
+  initPreloader();
+  loadSharedHeader();
+  initAccordions();
+  initBookingDialog();
+  initDemoForms();
+  initDoctorSearch();
+  initPrintChecklist();
+  initDepartmentTemplate();
+  initContactDateBounds();
+});
