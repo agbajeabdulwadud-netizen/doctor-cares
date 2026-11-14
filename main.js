@@ -11,6 +11,39 @@
     else fn();
   }
 
+   function loadSharedHeader() {
+  return fetch('header.html')
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error('Could not load shared header');
+      }
+      return response.text();
+    })
+    .then(function (html) {
+      var container = document.getElementById('shared-header');
+      if (!container) return;
+
+      container.innerHTML = html;
+
+      var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      var links = container.querySelectorAll('.nav-link');
+
+      Array.prototype.forEach.call(links, function (link) {
+        var linkPage = link.getAttribute('href').split('#')[0];
+
+        if (linkPage === currentPage) {
+          link.classList.add('active-link');
+          link.setAttribute('aria-current', 'page');
+        }
+      });
+
+      initHeader();
+      initMobileNavigation();
+    })
+    .catch(function (error) {
+      console.error('Header loading failed:', error);
+    });
+}
   
 function initPreloader() {
   var preloader = document.getElementById('preloader');
