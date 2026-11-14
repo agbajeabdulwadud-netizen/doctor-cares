@@ -37,11 +37,12 @@
   box-shadow: 0 1.2rem 3.2rem rgba(11,25,44,.08);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  transition: box-shadow 180ms ease, padding 180ms ease;
+  transition: box-shadow 180ms ease;
 }
 
 .site-header.header-compact {
-  padding-top: .65rem;
+  height: auto;
+  transform: none;
   box-shadow: 0 1rem 2.8rem rgba(11,25,44,.12);
 }
 
