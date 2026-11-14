@@ -336,4 +336,4 @@ function initPreloader() {
   initDepartmentTemplate();
   initContactDateBounds();
 });
-})();
+
