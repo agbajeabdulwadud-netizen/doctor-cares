@@ -23,7 +23,7 @@
 /* Desktop/tablet: brand + appointment action on row one; all links on row two. */
 .site-header {
   position: sticky;
-  top: 0;
+  top: 1.2rem;
   z-index: 100;
   width: min(calc(100% - 4rem), 144rem);
   max-width: 144rem;
