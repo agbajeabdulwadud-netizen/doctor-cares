@@ -22,14 +22,16 @@
 
 /* Desktop/tablet: brand + appointment action on row one; all links on row two. */
 .site-header {
-  position: sticky;
-  top: 1.2rem;
+  position: fixed;
+  top: 5.2rem;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
   width: min(calc(100% - 4rem), 144rem);
   max-width: 144rem;
   height: auto;
   min-height: 0;
-  margin: 1.2rem auto 0;
+  margin: 0;
   padding: 1rem 2.2rem 0;
   background: rgba(255,255,255,.98);
   border: 1px solid #e5edf1;
@@ -42,8 +44,13 @@
 
 .site-header.header-compact {
   height: auto;
-  transform: none;
+  transform: translateX(-50%);
   box-shadow: 0 1rem 2.8rem rgba(11,25,44,.12);
+}
+
+#shared-header {
+  display: block;
+  height: 14rem;
 }
 
 .header-container {
@@ -225,13 +232,15 @@
 /* Mobile: use the existing JS-controlled drawer and preserve all eight links. */
 @media (max-width: 768px) {
   .site-header {
-    position: sticky;
-    top: .8rem;
-    width: calc(100% - 2rem);
-    margin: .8rem auto 0;
-    padding: .8rem 1.1rem;
-    border-radius: 1.15rem;
-  }
+  position: fixed;
+  top: 5.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
+  margin: 0;
+  padding: .8rem 1.1rem;
+  border-radius: 1.15rem;
+}
 
   .header-container {
     display: flex;
@@ -239,6 +248,10 @@
     justify-content: space-between;
     gap: 1rem;
   }
+  
+  #shared-header {
+  height: 7.2rem;
+}
 
   .logo-text { font-size: 2.2rem; }
   .logo-subtext { font-size: .8rem; letter-spacing: .07em; }
