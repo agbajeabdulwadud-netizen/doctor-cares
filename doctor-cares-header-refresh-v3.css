@@ -44,7 +44,7 @@
 
 .site-header.header-compact {
   height: auto;
-  transform: translateX(-50%);
+  transform: none;
   box-shadow: 0 1rem 2.8rem rgba(11,25,44,.12);
 }
 
@@ -234,10 +234,11 @@
   .site-header {
   position: fixed;
   top: 5.2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  transform: none;
   width: calc(100% - 2rem);
-  margin: 0;
+  margin: 0 auto;
   padding: .8rem 1.1rem;
   border-radius: 1.15rem;
 }
