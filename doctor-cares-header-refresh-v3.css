@@ -241,6 +241,8 @@
   margin: 0 auto;
   padding: .8rem 1.1rem;
   border-radius: 1.15rem;
+    backdrop-filter: none;
+-webkit-backdrop-filter: none;
 }
 
   .header-container {
