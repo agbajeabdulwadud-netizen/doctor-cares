@@ -893,3 +893,84 @@ body.menu-open{overflow:hidden}
 @media print{.site-header,.demo-notice,.site-footer,.scroll-top-btn,.nav-backdrop,.modal-overlay,.no-print{display:none!important}body{display:block;background:#fff;color:#000;font-size:12pt}.container{max-width:none;padding:0}.section-padding{padding:1rem 0}a{color:#000;text-decoration:underline}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 @media(max-width:768px){.demo-notice{font-size:1.15rem;text-align:left}.booking-review-list>div{grid-template-columns:1fr;gap:.2rem}.modal-overlay{padding:1rem}.modal-dialog{max-height:94vh;max-height:94dvh}}
+
+
+/* Homepage hero: full-background consultation image */
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 68rem;
+  padding: 12rem 0 8rem;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(7, 20, 37, 0.88) 0%,
+      rgba(7, 20, 37, 0.72) 52%,
+      rgba(7, 20, 37, 0.38) 100%
+    ),
+    url("assets/images/hero-consultation.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-container {
+  display: block;
+  width: min(100% - 4rem, 120rem);
+}
+
+.hero-content {
+  max-width: 78rem;
+  color: #ffffff;
+}
+
+.hero-eyebrow {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.hero-title,
+.hero-title .hero-accent {
+  color: #ffffff;
+}
+
+.hero-lead {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-trust-bar {
+  border-top-color: rgba(255, 255, 255, 0.35);
+}
+
+.hero-trust-bar .trust-pill strong,
+.hero-trust-bar .trust-pill span,
+.hero-trust-bar .trust-icon {
+  color: #ffffff;
+}
+
+.hero-trust-bar .trust-pill span {
+  opacity: 0.82;
+}
+
+.hero-section .btn-outline {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 0;
+    padding: 11rem 0 6rem;
+    background-position: 58% center;
+  }
+
+  .hero-container {
+    width: min(100% - 3.2rem, 120rem);
+  }
+
+  .hero-trust-bar {
+    grid-template-columns: 1fr;
+  }
+}
