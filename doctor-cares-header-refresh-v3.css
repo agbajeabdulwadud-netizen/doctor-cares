@@ -245,9 +245,7 @@
 -webkit-backdrop-filter: none;
 }
 
-  .site-header.header-compact {
-    transform: translateY(-0.4rem);
-  }
+
 
   .header-container {
     display: flex;
@@ -428,7 +426,11 @@
   border-radius: 999px;
   background: rgba(0,0,0,.08);
 }
-
+@media (max-width: 768px) {
+  .site-header.header-compact {
+    transform: translateY(-0.4rem);
+  }
+}
 .preloader-progress-bar {
   width: 0;
   height: 100%;
