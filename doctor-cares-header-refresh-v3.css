@@ -245,6 +245,12 @@
 -webkit-backdrop-filter: none;
 }
 
+  @media (max-width: 768px) {
+  body.menu-open .site-header {
+    transform: none !important;
+  }
+}
+
 
 
   .header-container {
