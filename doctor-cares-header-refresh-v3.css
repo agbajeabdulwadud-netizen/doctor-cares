@@ -245,6 +245,10 @@
 -webkit-backdrop-filter: none;
 }
 
+  .site-header.header-compact {
+    transform: translateY(-0.4rem);
+  }
+
   .header-container {
     display: flex;
     min-height: 5.2rem;
@@ -283,6 +287,8 @@
     transition: transform 220ms ease, visibility 220ms ease;
     z-index: 99;
   }
+
+  
 
   .navbar.is-open {
     transform: translateX(0);
