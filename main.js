@@ -122,6 +122,44 @@ function initPreloader() {
     Array.prototype.forEach.call(links, function (link) { link.addEventListener('click', function () { close(false); }); });
     document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') close(true); });
     window.addEventListener('resize', function () { if (window.innerWidth > 768 && toggle.getAttribute('aria-expanded') === 'true') close(false); });
+
+     
+    // Close the mobile drawer when the user begins a vertical scroll gesture.
+    var touchStartY = 0;
+    var touchStartX = 0;
+
+    document.addEventListener('touchstart', function (event) {
+      if (window.innerWidth > 768 ||
+          toggle.getAttribute('aria-expanded') !== 'true' ||
+          event.touches.length !== 1) return;
+
+      touchStartY = event.touches[0].clientY;
+      touchStartX = event.touches[0].clientX;
+    }, { passive: true });
+
+    document.addEventListener('touchmove', function (event) {
+      if (window.innerWidth > 768 ||
+          toggle.getAttribute('aria-expanded') !== 'true' ||
+          event.touches.length !== 1) return;
+
+      var deltaY = Math.abs(event.touches[0].clientY - touchStartY);
+      var deltaX = Math.abs(event.touches[0].clientX - touchStartX);
+
+      // Ignore taps and horizontal swipes.
+      if (deltaY > 12 && deltaY > deltaX) {
+        close(false);
+      }
+    }, { passive: true });
+
+    // Support mouse-wheel and trackpad scrolling as well.
+    document.addEventListener('wheel', function (event) {
+      if (window.innerWidth <= 768 &&
+          toggle.getAttribute('aria-expanded') === 'true' &&
+          Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+        close(false);
+      }
+    }, { passive: true });
+
   }
 
   function initAccordions() {
