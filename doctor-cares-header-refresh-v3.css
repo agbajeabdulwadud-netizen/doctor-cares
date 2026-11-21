@@ -274,7 +274,7 @@
 
   .navbar {
     position: fixed;
-    top: 8rem;
+    top: 12rem;
     right: 0;
     bottom: 0;
     width: min(88vw, 36rem);
