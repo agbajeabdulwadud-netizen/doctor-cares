@@ -283,6 +283,8 @@
     overflow-x: hidden;
     overflow-y: auto;
     background: rgba (255, 255, 255, 0.86);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid #e5edf1;
     border-radius: 1.2rem 0 0 1.2rem;
     box-shadow: 0 1.5rem 4rem rgba(11,25,44,.18);
