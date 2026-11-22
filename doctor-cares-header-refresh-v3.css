@@ -213,6 +213,13 @@
 .menu-toggle.is-open .bar:nth-child(3) { transform: translateY(-.65rem) rotate(-45deg); }
 .nav-backdrop { display: none; }
 
+.qa-icon svg {
+  width: 2.4rem;
+  height: 2.4rem;
+  stroke-width: 2.2;
+  display: block;
+}
+
 /* Mid-sized tablets: same two-row layout, slightly tighter spacing. */
 @media (max-width: 1050px) and (min-width: 769px) {
   .site-header {
