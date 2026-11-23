@@ -1218,3 +1218,165 @@ body.menu-open{overflow:hidden}
   }
 }
 
+
+/* =========================================
+   INFRASTRUCTURE SECTION
+========================================= */
+
+.infrastructure-section {
+  padding: 10rem 0;
+  background: #f8fafb;
+}
+
+.infrastructure-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem;
+  align-items: end;
+  margin-bottom: 5rem;
+}
+
+.infrastructure-heading h2 {
+  max-width: 650px;
+  margin-top: 1.8rem;
+  font-size: clamp(3rem, 4vw, 4.8rem);
+  line-height: 1.15;
+  color: var(--color-primary);
+  text-wrap: balance;
+}
+
+.infrastructure-lead p {
+  max-width: 520px;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: var(--color-text-body);
+}
+
+.infrastructure-feature {
+  position: relative;
+  min-height: 460px;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  background: #102638;
+}
+
+.infrastructure-feature > img {
+  display: block;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.infrastructure-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5rem 4rem 3.5rem;
+  color: #fff;
+  background: linear-gradient(
+    to top,
+    rgba(5, 20, 32, 0.92),
+    rgba(5, 20, 32, 0)
+  );
+}
+
+.infrastructure-caption span {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #8fe0d4;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.infrastructure-caption h3 {
+  margin-bottom: 0.8rem;
+  color: #fff;
+  font-size: clamp(2.2rem, 3vw, 3.2rem);
+}
+
+.infrastructure-caption p {
+  color: #e2e8f0;
+  font-size: 1.5rem;
+}
+
+.infrastructure-capabilities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem;
+  margin-top: 5rem;
+}
+
+.infrastructure-item {
+  display: flex;
+  gap: 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #d7e0e5;
+}
+
+.infrastructure-number {
+  flex-shrink: 0;
+  color: var(--color-teal);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.infrastructure-item h3 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+.infrastructure-item p {
+  color: var(--color-text-body);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .infrastructure-intro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .infrastructure-capabilities {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .infrastructure-section {
+    padding: 6rem 0;
+  }
+
+  .infrastructure-intro {
+    margin-bottom: 3rem;
+  }
+
+  .infrastructure-feature,
+  .infrastructure-feature > img {
+    min-height: 360px;
+    height: 360px;
+  }
+
+  .infrastructure-caption {
+    padding: 4rem 2rem 2.5rem;
+  }
+
+  .infrastructure-capabilities {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .infrastructure-item {
+    padding-top: 2rem;
+  }
+}
+
