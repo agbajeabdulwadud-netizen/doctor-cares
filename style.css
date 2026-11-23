@@ -975,3 +975,246 @@ body.menu-open{overflow:hidden}
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =========================================
+   CLINICAL STANDARDS — EDITORIAL REDESIGN
+========================================= */
+
+.clinical-standards-section {
+  background: #f8fafc;
+  color: #0b192c;
+  padding: 10rem 0;
+  overflow: hidden;
+}
+
+.clinical-standards-section .container {
+  max-width: 120rem;
+}
+
+/* Introductory heading */
+
+.clinical-standards-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 6rem;
+  align-items: end;
+  margin-bottom: 5rem;
+}
+
+.clinical-standards-heading .section-tag {
+  display: inline-block;
+  background: transparent;
+  color: #0f766e;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.clinical-standards-heading h2 {
+  max-width: 75rem;
+  color: #0b192c;
+  font-size: clamp(3.2rem, 5vw, 5.8rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+
+.clinical-standards-lead {
+  border-left: 2px solid #0f766e;
+  padding-left: 2.5rem;
+}
+
+.clinical-standards-lead p {
+  color: #526174;
+  font-size: 1.65rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Clinical team photograph */
+
+.clinical-standards-feature {
+  position: relative;
+  width: 100%;
+  height: 48rem;
+  margin-bottom: 7rem;
+  background: #dce5e8;
+  overflow: hidden;
+}
+
+.clinical-standards-feature > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+.clinical-feature-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(48rem, 90%);
+  padding: 2.8rem 3.2rem;
+  background: #0b192c;
+  color: #ffffff;
+}
+
+.clinical-feature-caption span {
+  display: block;
+  color: #b9a47a;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+
+.clinical-feature-caption p {
+  color: #ffffff;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Four clinical commitments */
+
+.clinical-commitments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 7rem;
+}
+
+.clinical-commitment {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 2rem;
+  padding: 3rem 0;
+  border-top: 1px solid #d7dee5;
+}
+
+.commitment-number {
+  color: #0f766e;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding-top: 0.4rem;
+}
+
+.clinical-commitment h3 {
+  color: #0b192c;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 1rem;
+}
+
+.clinical-commitment p {
+  color: #526174;
+  font-size: 1.45rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Closing statement */
+
+.clinical-standards-closing {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid #d7dee5;
+}
+
+.clinical-standards-closing p {
+  max-width: 85rem;
+  color: #0b192c;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .clinical-standards-section {
+    padding: 7rem 0;
+  }
+
+  .clinical-standards-intro {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .clinical-standards-feature {
+    height: 38rem;
+  }
+
+  .clinical-commitments {
+    column-gap: 3rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .clinical-standards-section {
+    padding: 6rem 0;
+  }
+
+  .clinical-standards-intro {
+    margin-bottom: 3.5rem;
+  }
+
+  .clinical-standards-heading h2 {
+    font-size: 3.5rem;
+  }
+
+  .clinical-standards-lead {
+    padding-left: 1.8rem;
+  }
+
+  .clinical-standards-lead p {
+    font-size: 1.5rem;
+  }
+
+  .clinical-standards-feature {
+    height: 32rem;
+    margin-bottom: 4rem;
+  }
+
+  .clinical-feature-caption {
+    padding: 2rem;
+  }
+
+  .clinical-feature-caption p {
+    font-size: 1.45rem;
+  }
+
+  .clinical-commitments {
+    grid-template-columns: 1fr;
+  }
+
+  .clinical-commitment {
+    grid-template-columns: 4rem 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 0;
+  }
+
+  .clinical-commitment h3 {
+    font-size: 1.8rem;
+  }
+
+  .clinical-commitment p {
+    font-size: 1.4rem;
+  }
+
+  .clinical-standards-closing p {
+    font-size: 1.7rem;
+  }
+}
+
