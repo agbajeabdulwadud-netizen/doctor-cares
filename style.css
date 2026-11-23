@@ -1454,5 +1454,204 @@ body.menu-open{overflow:hidden}
     font-size: 1.4rem;
   }
 }
+/* =========================================
+   GLOBAL HEALTHCARE — PREMIUM REDESIGN
+========================================= */
 
+.international-section {
+  background: #f8fafc;
+  color: #0b192c;
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.international-section .container {
+  max-width: 120rem;
+}
+
+/* Section introduction */
+
+.international-section .section-header {
+  max-width: 82rem;
+  margin: 0 auto 6rem;
+  text-align: left;
+}
+
+.international-section .section-tag {
+  display: inline-block;
+  color: #0f766e;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.international-section .section-heading {
+  max-width: 75rem;
+  color: #0b192c;
+  font-size: clamp(3.2rem, 5vw, 5.8rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  margin-bottom: 2rem;
+  text-wrap: balance;
+}
+
+.international-section .section-sub {
+  max-width: 65rem;
+  color: #526174;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Patient journey */
+
+.international-section .intl-pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+  counter-reset: journey;
+}
+
+.international-section .pathway-step {
+  position: relative;
+  min-height: 23rem;
+  padding: 3rem 2.5rem;
+  background: #ffffff;
+  border: 1px solid #dce5e8;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 30px rgba(11, 25, 44, 0.04);
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.international-section .pathway-step:hover {
+  transform: translateY(-5px);
+  border-color: #0f766e;
+  box-shadow: 0 16px 36px rgba(11, 25, 44, 0.09);
+}
+
+/* Number marker */
+
+.international-section .step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  padding: 0;
+  margin-bottom: 3rem;
+  border-radius: 50%;
+  background: #e6f4f1;
+  color: #0f766e;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+/* Journey text */
+
+.international-section .step-title {
+  color: #0b192c;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1.2rem;
+}
+
+.international-section .step-desc {
+  color: #526174;
+  font-size: 1.45rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Enquiry action */
+
+.international-section .btn-teal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 5.2rem;
+  padding: 1.5rem 2.8rem;
+  border-radius: 0.5rem;
+  background: #0f766e;
+  color: #ffffff;
+  font-size: 1.45rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.25s ease,
+              transform 0.25s ease;
+}
+
+.international-section .btn-teal:hover {
+  background: #115e59;
+  transform: translateY(-2px);
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .international-section {
+    padding: 8rem 0;
+  }
+
+  .international-section .intl-pathway-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .international-section {
+    padding: 6rem 0;
+  }
+
+  .international-section .section-header {
+    margin-bottom: 4rem;
+  }
+
+  .international-section .section-heading {
+    font-size: 3.5rem;
+  }
+
+  .international-section .section-sub {
+    font-size: 1.5rem;
+  }
+
+  .international-section .intl-pathway-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .international-section .pathway-step {
+    min-height: auto;
+    padding: 2.5rem;
+  }
+
+  .international-section .step-badge {
+    margin-bottom: 2rem;
+  }
+
+  .international-section .step-title {
+    font-size: 1.9rem;
+  }
+
+  .international-section .step-desc {
+    font-size: 1.4rem;
+  }
+
+  .international-section .btn-teal {
+    width: 100%;
+    text-align: center;
+  }
+}
 
